@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout');
 });
+
+Route::resource('appointments','AppointmentController');
+Route::resource('bikes','BikeController');
