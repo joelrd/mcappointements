@@ -3,10 +3,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
-        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-        <meta name="generator" content="Jekyll v3.8.5">
-        <title>@yield('title')</title>
-        <link rel="canonical" href="@yield('canonial')">
+        @yield('title')
+        <link rel="canonical" href="http://{{$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']}}">
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <style>
@@ -56,12 +54,10 @@
             </nav>
         </div>
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-            <h1 class="display-4">Welcome to the MC Motorcycle</h1>
-            <p class="lead">Pick one of the options below to make your appointment with our workshop</p>
+            @yield('contenttitle')
         </div>
         <div class="container">
             @yield('content')
-            </div>
             <footer class="pt-4 my-md-5 pt-md-5 border-top">
                 <div class="row">
                     <div class="col-12 col-md">
